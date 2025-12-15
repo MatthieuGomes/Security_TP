@@ -1,4 +1,4 @@
-# Security TP 
+i# Security TP 
 
 ## Level 00
 
@@ -25,3 +25,9 @@ La faille est (encore) l'utilisation de systeme !
 
 En changeant la variable d'environnement $USER pour \$\(/bin/getflag\), afin que le asprintf n'interprète pas le $(), seulement le system, on arrive à faire executer getflag
 
+
+# Level 03 
+
+Writable.d est un dossier dans lequel on peut créer des ficihers ==> c'est une faille car crontab execute tout fichier présent dans ce dossier et les supprime
+
+on créer donc un fichier qui contient la commande getflag et redirige le résultat sur un fichier result pour que l'admin ne soit pas informé
