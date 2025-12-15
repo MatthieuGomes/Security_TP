@@ -31,3 +31,11 @@ En changeant la variable d'environnement $USER pour \$\(/bin/getflag\), afin que
 Writable.d est un dossier dans lequel on peut créer des ficihers ==> c'est une faille car crontab execute tout fichier présent dans ce dossier et les supprime
 
 on créer donc un fichier qui contient la commande getflag et redirige le résultat sur un fichier result pour que l'admin ne soit pas informé
+
+
+# Level 04
+
+La seule protection est le nom du fichier : on créé donc un symlink qui s'appelle différemment et on peut le lire : la clé est le mot de passe !
+
+
+
