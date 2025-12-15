@@ -19,3 +19,9 @@ on constate que le code utilise "echo" en se basant sur les variables d'environn
 Par la suite, lors du lancement du programme, le programme lance "echo" en mode system, mais ce "echo" est en fait getflag.
 
 
+## Level 02
+
+La faille est (encore) l'utilisation de systeme ! 
+
+En changeant la variable d'environnement $USER pour \$\(/bin/getflag\), afin que le asprintf n'interprète pas le $(), seulement le system, on arrive à faire executer getflag
+
